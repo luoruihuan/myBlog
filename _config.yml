@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: concise
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,7 +82,9 @@ deploy:
   repo: https://github.com/luoruihuan/luoruihuan.github.io.git
   branch: master
 
-  # Disqus
+# Disqus
 disqus:
   enable: true
   shortname: luoruihuan    #your name
+
+avatar: https://avatars1.githubusercontent.com/u/32269?v=3&s=460
