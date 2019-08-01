@@ -5,10 +5,10 @@
 # Site
 title: 罗瑞环的个人博客
 subtitle: 前端博客
-description: HTML,CSS,VUE,Angular
-keywords:
-author: luoruihuan
-language:
+description:
+keywords: 博客,前端
+author:
+language: zh-Hans
 timezone:
 
 # URL
@@ -74,6 +74,11 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -87,4 +92,4 @@ disqus:
   enable: true
   shortname: luoruihuan    #your name
 
-avatar: https://avatars1.githubusercontent.com/u/32269?v=3&s=460
+avatar: /uploads/avatar.png

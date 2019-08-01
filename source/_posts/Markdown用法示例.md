@@ -18,6 +18,8 @@ categories:
 
 ![cmd-markdown-logo](https://www.zybuluo.com/static/img/logo.png)
 
+<!--more-->
+
 除了您现在看到的这个 Cmd Markdown 在线版本，您还可以前往以下网址下载：
 
 ### [Windows/Mac/Linux 全平台客户端](https://www.zybuluo.com/cmd/)
