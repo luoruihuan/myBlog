@@ -7,7 +7,7 @@ title: 罗瑞环的个人博客
 subtitle: 前端博客
 description:
 keywords: 博客,前端
-author:
+author: Ron.luo
 language: zh-Hans
 timezone:
 
@@ -91,5 +91,6 @@ deploy:
 disqus:
   enable: true
   shortname: luoruihuan    #your name
+  count: true
 
 avatar: /uploads/avatar.png
