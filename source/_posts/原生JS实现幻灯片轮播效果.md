@@ -10,7 +10,7 @@ tags: js轮播
 
 大致效果：
 
-![swiper-bg](uploads/swiper-bg.png)
+![swiper-bg](/uploads/swiper-bg.png)
 
 html结构很简单，两个列表，一个代表图片列表，一个是右下角序号列表。
 
