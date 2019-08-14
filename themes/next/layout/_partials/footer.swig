@@ -6,7 +6,8 @@
     <i class="fa fa-{{ theme.footer.icon }}"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
-
+  <span class="author"><a id="jsl_speed_stat2" href="http://www.yunaq.com/#zid=5d521c2745475e07ac6f31ed" target="_blank">知道创宇云安全</a></span>
+   <script src="//static.yunaq.com/static/js/stat/picture2_stat.js" charset="utf-8" type="text/javascript"></script>
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
