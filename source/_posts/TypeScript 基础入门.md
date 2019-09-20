@@ -3,6 +3,7 @@ title: TypeScript 基础入门知识分享(一)
 date: 2019-08-30 23:09:41
 categories: 前端
 tags:  TypeScript
+urlname: TypeScript
 ---
 ### 一、简单介绍
 

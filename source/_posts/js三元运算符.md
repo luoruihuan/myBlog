@@ -3,6 +3,7 @@ title: Javascript三元条件运算符
 date: 2016-3-16 22:03:05
 categories: 前端
 tags: js
+urlname: TernaryConditionalOperator
 ---
 
 

@@ -3,6 +3,7 @@ title: 原生js实现幻灯片轮播效果
 date: 2016-2-18 20:00:00
 categories: 前端
 tags: js轮播
+urlname: JSSwiper
 ---
 
 
