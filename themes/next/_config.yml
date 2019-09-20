@@ -404,7 +404,7 @@ gitment:
   client_id:  Iv1.c0588a984983eef6 # MUST HAVE, Github client id for the Gitment
   client_secret: 553191efe729050ba42c155f15aad493ec7dd6d9  # EITHER this or proxy_gateway, Github access secret token for the Gitment
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
-  redirect_protocol: luoruihuan.github.io # Protocol of redirect_uri with force_redirect_protocol when mint enabled
+  redirect_protocol: luoruihuan.top # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
 # Baidu Share
 # Available value:
