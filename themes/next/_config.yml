@@ -394,17 +394,18 @@ valine:
 # You can get your Github ID from https://api.github.com/users/<Github username>
 gitment:
   enable: true
-  mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
+  mint: false # 建议false
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
   cleanly: false # Hide 'Powered by ...' on footer, and more
-  language: zh-Hans # Force language, or auto switch by theme
-  github_user: luoruihuan # MUST HAVE, Your Github ID
-  github_repo: luoruihuan.github.io # MUST HAVE, The repo you use to store Gitment comments
-  client_id:  Iv1.c0588a984983eef6 # MUST HAVE, Github client id for the Gitment
-  client_secret: 553191efe729050ba42c155f15aad493ec7dd6d9  # EITHER this or proxy_gateway, Github access secret token for the Gitment
+  language: # Force language, or auto switch by theme
+  github_user: luoruihuan # MUST HAVE, Your Github Username
+  github_repo: BlogsComments # 你存储评论的repo 如果没有新建可以是 你的博客repo 如：aoenian.github.io
+  client_id: '8ad006f46dcfbfa6cadb' # MUST HAVE, Github client id for the Gitment
+  client_secret: '9e8804f0ec285bac617e3c3f79e3d5a7ccf35919' # EITHER this or proxy_gateway, Github access secret token for the Gitment
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
-  redirect_protocol: luoruihuan.top # Protocol of redirect_uri with force_redirect_protocol when mint enabled
+  redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
+
 
 # Baidu Share
 # Available value:
