@@ -21,6 +21,7 @@ urlname: gitWorkflow
 ```shell
 // 新建一个文件夹
 $  mkdir gitDemo
+
 // 初始化Git仓库
 $  git init
 ```
@@ -58,9 +59,9 @@ $ git clone git@github.com:userName/gitDemo.git
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果有多人开发只需要每个人各自克隆一下就好了。
 #### 4、分支管理
-&nbsp;&nbsp;&nbsp;&nbsp;几乎每一种版本控制系统都以某种形式支持分支，分支的功能大致就是将不能功能的代码剥离出来，同时不影响主线的开发。实际应用中，一般采用一个`master`主分支，为线上稳定版本分支，此分支不可直接提交，只能通`过develop`或者`hotfix`分支进行合并，一个`develop`开发分支，分支为最新完成开发通过开发自测的开发分支，在我们项目中，给到测试的代码就是直接从`develop`中打包，而没有采用`release`分支。第三个为`feature`分支，也就是功能分支，当我们接到一个新功能需要开发时，需要从`develop`分支切一个属于自己的功能开发分支，当功能开发完成需要交付测试时，将代码合并至`develop`分支。最后还需要一个`hotfix`分支，此分支用来解决线上爆出的bug需要紧急修复，此分支需要从线上版本`master`分支切出，通过测试上线后合并至`master`和`develop`分支。这是现在大多数包括我们自己开发团队在使用的Git分支管理规范和流程，也是前人经过探索总结的，来保证开发过程更好的进行沟通协作。这种` git flow `模式下的项目会一直保留两个长期分支，`master`存放对外发布的稳定版，`develop`存放日常开发的最新版。另外`master`每次发布后需要对当前节点打上`标签(Tag)`进行记录，一般可以用于版本号记录，方便以后版本追溯。
+&nbsp;&nbsp;&nbsp;&nbsp;几乎每一种版本控制系统都以某种形式支持分支，分支的功能大致就是将不同功能的代码剥离出来，同时不影响主线的开发。实际应用中，一般采用一个`master`主分支，为线上稳定版本分支，此分支不可直接提交，只能通过`develop`或者`hotfix`分支进行合并。一个为`develop`开发分支，分支为最新完成开发通过开发自测的开发分支，在我们项目中，给到测试的代码就是直接从`develop`中打包，而没有采用`release`分支。第三个为`feature`分支，也就是功能分支，当我们接到一个新功能需要开发时，需要从`develop`分支切一个属于自己的功能开发分支，当功能开发完成需要交付测试时，将代码合并至`develop`分支。最后还需要一个`hotfix`分支，此分支用来解决线上爆出的bug需要紧急修复，此分支需要从线上版本`master`分支切出，通过测试上线后合并至`master`和`develop`分支。这是现在大多数包括我们自己开发团队在使用的`Git`分支管理规范和流程，也是前人经过探索总结的，来保证开发过程更好的进行沟通协作。这种` git flow `模式下的项目会一直保留两个长期分支，`master`存放对外发布的稳定版，`develop`存放日常开发的最新版。另外`master`每次发布后需要对当前节点打上`标签(Tag)`进行记录，一般可以用于版本号记录，方便以后版本追溯。
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>I、</b>基本管理
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创建分支很简单,速度也很快，主要因为创建分支时，`Git`只是新建了一个指针，指向切出分支相同的提交，再把`HEAD`指向新分支，就表示在新建分支上，工作区文件实质上没有变化。分支操作的基础命令如下:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创建分支很简单,速度也很快，主要因为创建分支时，`Git`只是新建了一个指针，指向切出分支相同的那次提交，再把`HEAD`指向新分支，就表示在新建分支上，工作区文件实质上没有变化。分支操作的基础命令如下:
 ```js
 // 创建分支
 $ git branch (branchname)
@@ -100,7 +101,7 @@ $ git tag v1.0 commitID
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;需要注意的一点是标签总是与某个`commit`挂钩的，如果这个`commit`既出现在`master`分支又出现在`dev`分支那么这两个分支都是可以看到标签的。
 #### 5、Git Stash 和 Git WorkTree 场景和用法
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>I、Git Stash </b>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们在开发时经常会遇到这样的场景，这在 `feature` 分支开发功能，线上突然出现了高优先级bug要马上解决，但是新功能才写了一半不想提交，这个时候就可以用`stash`命令将当前进度保存起来，然后切换至另一个分支修改bug，修改完成后切回 `feature` 恢复之前进度继续开发。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们在开发时经常会遇到这样的场景，正在 `feature` 分支开发功能，线上突然出现了高优先级bug要马上解决，但是新功能才写了一半不想提交，这个时候就可以用`stash`命令将当前进度保存起来，然后切换至另一个分支修改bug，修改完成后切回 `feature` 恢复之前进度继续开发。
 ```JS
 // 保存当前工作进度，可以添加save增加注释，可以多次使用
 $ git stash save <message>
@@ -121,10 +122,10 @@ $ git stash clear
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`git stash` 已经可以基本上帮助我们解决多个分支切换工作的问题，但是工作中更多的时候会有需要并行开发的情况，我需要同时多开编辑器，而且更多时候因为分支不同，我有可能依赖的`node_modules`版本也是有差异的，但是因为我们配置`ignore`的原因，切换分支并不会重新安装依赖会导致打包依赖时的各种问题，`git 2.6 `以上开始提供了` worktree` 功能，可以解决这样的问题。`git worktree` 从一个仓库中可以创建多个工作目录，方便多开编辑器并行开发。`git worktree `的命令只有几行非常容易记住。
 ```js
 // 增加新的worktree
-$ git worktree add <路径> [<分支>]
+$ git worktree add [路径] [分支]
 
 // 新分支创建
-$ git worktree add -b <新分支名> <新路径> <从此分支创建>
+$ git worktree add -b [新分支名] [新路径] [从此分支创建]
 // eg. git worktree add -b myNewBranch ../testDir master
 
 // worktree 详细情况, 可以增加 --porcelain 选项，用来改变显示风格
