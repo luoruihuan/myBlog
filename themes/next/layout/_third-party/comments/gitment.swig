@@ -3,12 +3,12 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     {% if theme.gitment.mint %}
         {% set CommentsClass = "Gitmint" %}
-       <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
-        <script src="https://billts.site/js/gitment.js"></script>
+       <link rel="stylesheet" href="../../../css/gitment.css">
+        <script src="../../../js/src/gitment.js"></script>
     {% else %}
         {% set CommentsClass = "Gitment" %}
-        <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
-        <script src="https://billts.site/js/gitment.js"></script>
+        <link rel="stylesheet" href="../../../css/gitment.css">
+        <script src="../../../js/src/gitment.js"></script>
     {% endif %}
 <!-- END LOCAL -->
 
