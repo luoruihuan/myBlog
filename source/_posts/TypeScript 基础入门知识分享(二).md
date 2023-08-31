@@ -1,6 +1,6 @@
 ---
 title: TypeScript 基础入门知识分享(二)
-date: 2019-09-13 22:19:00
+date: 2022-10-13 22:19:00
 categories: 前端
 tags:  TypeScript
 urlname: TypeScript2

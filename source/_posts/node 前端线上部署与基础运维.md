@@ -1,6 +1,6 @@
 ---
 title: node前端线上部署与基础运维
-date: 2020-07-06 21:10:35
+date: 2022-04-16 21:10:35
 categories: 前端
 tags:  node
 urlname: nodeDeploy

@@ -1,6 +1,6 @@
 ---
 title: 了解输入url到页面加载，为了更好地性能优化
-date: 2021-01-28 09:51:35
+date: 2023-01-28 09:51:35
 categories: 前端
 tags:  http
 urlname: webOptimize
